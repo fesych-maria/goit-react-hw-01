@@ -1,6 +1,8 @@
+import css from './Profile.module.css';
+
 const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <div>
+    <div className={css.userWrapper}>
       <div>
         <img src={image} alt="User avatar" />
         <p>{name}</p>
@@ -8,7 +10,7 @@ const Profile = ({ name, tag, location, image, stats }) => {
         <p>{location}</p>
       </div>
 
-      <ul>
+      <ul className={css.list}>
         <li>
           <span>Followers</span>
           <span>{stats.followers}</span>
@@ -24,6 +26,6 @@ const Profile = ({ name, tag, location, image, stats }) => {
       </ul>
     </div>
   );
-}
+};
 
-export default Profile
+export default Profile;
