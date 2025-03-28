@@ -1,0 +1,17 @@
+.paragraph {
+  font-size: 20px;
+}
+
+.img {
+  margin-bottom: 8px;
+}
+
+.online {
+  font-size: 14px;
+  color: #008001;
+}
+
+.offline {
+  font-size: 14px;
+  color: #ff0000;
+}

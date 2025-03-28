@@ -1,23 +1,27 @@
-const TransactionHistory = ({items}) => {
+import css from './TransactionHistory.module.css';
+
+const TransactionHistory = ({ items }) => {
   return (
-    <table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+    <table className={css.table}>
+      <thead className={css.heading}>
+        <tr className={css.row}>
+          <th className={css.headingText}>Type</th>
+          <th className={css.headingText}>Amount</th>
+          <th className={css.headingText}>Currency</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    {items.map(item => <tr key={item.id}>
-      <td>{item.type}</td>
-      <td>{item.amount}</td>
-      <td>{item.currency}</td>
-    </tr>)}
-  </tbody>
-</table>
-  )
-}
+      <tbody className={css.body}>
+        {items.map(item => (
+          <tr key={item.id} className={css.row}>
+            <td className={css.data}>{item.type}</td>
+            <td className={css.data}>{item.amount}</td>
+            <td className={css.data}>{item.currency}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
 
-export default TransactionHistory
+export default TransactionHistory;

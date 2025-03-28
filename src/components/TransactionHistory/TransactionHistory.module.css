@@ -1,0 +1,38 @@
+.heading {
+  background-color: #2a2a2a;
+}
+
+.row {
+  text-align: center;
+}
+
+.row:nth-child(even) {
+  background-color: #d3d3d3;
+}
+
+.table,
+.heading,
+.data {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.headingText {
+  color: #fff;
+  font-weight: 700;
+}
+
+.data,
+.headingText {
+  padding: 4px 60px;
+  text-align: center;
+}
+
+.data:first-child {
+  text-transform: capitalize;
+  text-align: start;
+}
+
+.data {
+  font-weight: 400;
+}

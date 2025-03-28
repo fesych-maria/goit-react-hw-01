@@ -1,11 +1,17 @@
-const FriendListItem = ({avatar, name, isOnline}) => {
-  return (
-    <div>
-  <img src={avatar} alt="Avatar" width="48" />
-  <p>{name}</p>
-  {isOnline ? <p>Online</p> : <p>Offline</p>}
-</div>
-  )
-}
+import css from './FriendListItem.module.css';
 
-export default FriendListItem
+const FriendListItem = ({ avatar, name, isOnline }) => {
+  return (
+    <>
+      <img src={avatar} alt="Avatar" width="48" className={css.img} />
+      <p className={css.paragraph}>{name}</p>
+      {isOnline ? (
+        <p className={css.online}>Online</p>
+      ) : (
+        <p className={css.offline}>Offline</p>
+      )}
+    </>
+  );
+};
+
+export default FriendListItem;
